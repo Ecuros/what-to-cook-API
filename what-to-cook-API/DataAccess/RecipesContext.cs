@@ -12,6 +12,7 @@ namespace what_to_cook_API.DataAccess
         public RecipesContext(DbContextOptions options) : base(options) { }
         public DbSet<Ingredient> Ingredients { get; set; }
         public DbSet<Recipe> Recipes { get; set; }
+        public DbSet<Category> Categories { get; set; }
         
     }
 }

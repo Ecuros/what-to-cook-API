@@ -12,15 +12,15 @@ namespace what_to_cook_API.Models
         public int Id { get; set; }
         [Required]
         [MaxLength(100)]
-        public string Name { get; set; }
-        [MaxLength(100)]
-        public string Category { get; set; }
+        public string Name { get; set; }       
+        
         [Required]
         [Column(TypeName = "decimal(5, 2)")]
         public decimal PrepTime { get; set; }
         [MaxLength(200)]
         public string DescriptionShort { get; set; }
         public string DescriptionLong { get; set; }
+        public Category Category { get; set; }
         public List<Ingredient> Ingredients { get; set; } = new List<Ingredient>();
     }
 }
